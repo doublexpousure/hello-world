@@ -1,0 +1,175 @@
+@charset "utf-8";
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background: #42413C;
+	margin: 0;
+	padding: 0;
+	color: #000;
+}
+
+/* ~~ Selectores de elemento/etiqueta ~~ */
+ul, ol, dl { /* Debido a las diferencias existentes entre los navegadores, es recomendable no a&ntilde;adir relleno ni m&aacute;rgenes en las listas. Para lograr coherencia, puede especificar las cantidades deseadas aqu&iacute; o en los elementos de lista (LI, DT, DD) que contienen. Recuerde que lo que haga aqu&iacute; se aplicar&aacute; en cascada en la lista .nav, a no ser que escriba un selector m&aacute;s espec&iacute;fico. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* la eliminaci&oacute;n del margen superior resuelve un problema que origina que los m&aacute;rgenes escapen de la etiqueta div contenedora. El margen inferior restante lo mantendr&aacute; separado de los elementos de que le sigan. */
+	padding-right: 15px;
+	padding-left: 15px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	text-align: center;
+}
+a img { /* este selector elimina el borde azul predeterminado que se muestra en algunos navegadores alrededor de una imagen cuando est&aacute; rodeada por un v&iacute;nculo */
+	border: none;
+}
+/* ~~ La aplicaci&oacute;n de estilo a los v&iacute;nculos del sitio debe permanecer en este orden (incluido el grupo de selectores que crea el efecto hover -paso por encima-). ~~ */
+a:link {
+	color: #42413C;
+	text-decoration: underline; /* a no ser que aplique estilos a los v&iacute;nculos para que tengan un aspecto muy exclusivo, es recomendable proporcionar subrayados para facilitar una identificaci&oacute;n visual r&aacute;pida */
+}
+a:visited {
+	color: #6E6C64;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* este grupo de selectores proporcionar&aacute; a un usuario que navegue mediante el teclado la misma experiencia de hover (paso por encima) que experimenta un usuario que emplea un rat&oacute;n. */
+	text-decoration: none;
+}
+.container .content .titulo {
+	font-family: "budmo Jiggler";
+	font-size: 78px;
+	font-style: normal;
+	line-height: normal;
+	color: #000;
+	text-align: center;
+	background-color: #FF0;
+}
+
+
+/* ~~ este contenedor de anchura fija rodea a las dem&aacute;s divs ~~ */
+.container {
+	width: 1024px; /* el valor autom&aacute;tico de los lados, unido a la anchura, centra el dise&ntilde;o */
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+	background-color: #90F;
+	float: none;
+}
+
+
+.container .content .Subtitulo {
+	font-family: "park Lane NF";
+	font-size: 30px;
+	font-style: normal;
+	line-height: normal;
+	color: #C60;
+	text-align: center;
+}
+.container .content h2 {
+	font-family: "budmo Jiggler";
+	font-size: 30px;
+	font-style: normal;
+	line-height: normal;
+	color: #FF0;
+}
+.container .content p {
+	font-family: GeosansLight;
+	font-size: 18px;
+	color: #FFF;
+	font-weight: bold;
+}
+
+
+
+/* ~~ no se asigna una anchura al encabezado. Se extender&aacute; por toda la anchura del dise&ntilde;o. Contiene un marcador de posici&oacute;n de imagen que debe sustituirse por su propio logotipo vinculado ~~ */
+.header {
+	height: 480px;
+	width: 1024px;
+	background-color: rgb(201,198,195);
+	background-image: url(Pics/Double%20Expousure%20logo%20conocenos.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+/* ~~ Esta es la informaci&oacute;n de dise&ntilde;o. ~~ 
+
+1) El relleno s&oacute;lo se sit&uacute;a en la parte superior y/o inferior de la div. Los elementos situados dentro de esta div tienen relleno a los lados. Esto le ahorra las "matem&aacute;ticas de modelo de cuadro". Recuerde que si a&ntilde;ade relleno o borde lateral a la div propiamente dicha, &eacute;ste se a&ntilde;adir&aacute; a la anchura que defina para crear la anchura *total*. Tambi&eacute;n puede optar por eliminar el relleno del elemento en la div y colocar una segunda div dentro de &eacute;sta sin anchura y el relleno necesario para el dise&ntilde;o deseado.
+
+*/
+
+.content {
+	width: 1024px;
+	padding-top: 10px;
+	padding-right: 0;
+	padding-bottom: 10px;
+	padding-left: 0;
+    margin: 0 auto;
+}
+
+/* ~~ El pie de p&aacute;gina ~~ */
+.footer {
+	width: 1024px;
+	padding-top: 10px;
+	padding-right: 0;
+	padding-bottom: 10px;
+	padding-left: 0px;
+	background-color: #FF9900;
+	clear: none;
+	float: none;
+	height: auto;
+	margin-left: 120px;
+}
+#footer p {
+	color: #000;
+	font-size: 24px;
+	font-family: geosansLight;
+	text-align: center;
+}
+
+
+/* ~~ clases float/clear varias ~~ */
+.fltrt {  /* esta clase puede utilizarse para que un elemento flote en la parte derecha de la p&aacute;gina. El elemento flotante debe preceder al elemento junto al que debe aparecer en la p&aacute;gina. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* esta clase puede utilizarse para que un elemento flote en la parte izquierda de la p&aacute;gina. El elemento flotante debe preceder al elemento junto al que debe aparecer en la p&aacute;gina. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* esta clase puede situarse en una <BR /> o div vac&iacute;a como elemento final tras la &uacute;ltima div flotante (dentro de #container) si #footer se elimina o se saca fuera de #container */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+
+.wrapper {
+	width: 65.9%;
+	max-width: 1115px;
+	overflow: hidden;
+	background: #63C;
+	padding-left: 350px;
+}
+
+	
+.content nav{
+	line-height: 10px;
+	font-family: roboto;
+	margin: 0px;
+}
+
+
+.content nav a{
+	display:inline-block;
+	color:#fff;
+	text-decoration:none;
+	padding:15px 20px;
+	line-height:normal;
+	font-size:20px;
+}
+
+.content nav a:hover {
+	background:#f56f3a;
+	border-radius:30px;
+}

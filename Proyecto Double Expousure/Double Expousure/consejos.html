@@ -1,0 +1,503 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Consejos Double Expousure</title>
+<style type="text/css">
+<!--
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background-color: #42413C;
+	margin: 0;
+	padding: 0;
+	color: #000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* ~~ Selectores de elemento/etiqueta ~~ */
+ul, ol, dl { /* Debido a las diferencias existentes entre los navegadores, es recomendable no añadir relleno ni márgenes en las listas. Para lograr coherencia, puede especificar las cantidades deseadas aquí o en los elementos de lista (LI, DT, DD) que contienen. Recuerde que lo que haga aquí se aplicará en cascada en la lista .nav, a no ser que escriba un selector más específico. */
+	padding: 0;
+	margin: 0;
+}
+a img { /* este selector elimina el borde azul predeterminado que se muestra en algunos navegadores alrededor de una imagen cuando está rodeada por un vínculo */
+	border: none;
+}
+.container .content h1 {
+	font-family: "budmo Jiggler";
+	background-color: #93C;
+	font-size: 50px;
+	color: #FFF;
+	margin: 0px;
+}
+.wrapper {
+	font-family: "American Captain";
+}
+.container .content .intro p {
+	font-family: roboto;
+	color: #000;
+	font-size: 18px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+.container .content .paisaje h2 {
+	font-family: leaffy;
+	font-size: 50px;
+	color: #FFF;
+	background-color: #060;
+	margin: 2px;
+}
+.container .content .canon h2 {
+	font-family: canon;
+	font-size: 30px;
+	color: #FFF;
+	background-color: #F03;
+	margin: 0px;
+}
+.container .content .subs h3 {
+	font-family: "budmo Jiggler";
+	font-size: 30px;
+	color: #000;
+}
+.container .content .textop p {
+	font-family: GeosansLight;
+	font-size: 19px;
+	font-weight: bold;
+	text-align: left;
+	margin-right: 15px;
+	margin-left: 15px;
+}
+.container .content .urbana h2 {
+	font-family: "urban Jungle";
+	color: #FFF;
+	background-color: #039;
+	font-size: 50px;
+	margin: 2px;
+}
+.container .content .retrato h2 {
+	font-family: HACKED;
+	font-size: 50px;
+	color: #FFF;
+	background-color: #000;
+	margin: 2px;
+}
+/* ~~ La aplicación de estilo a los vínculos del sitio debe permanecer en este orden (incluido el grupo de selectores que crea el efecto hover -paso por encima-). ~~ */
+a:link {
+	color: #42413C;
+	text-decoration: underline; /* a no ser que aplique estilos a los vínculos para que tengan un aspecto muy exclusivo, es recomendable proporcionar subrayados para facilitar una identificación visual rápida */
+}
+a:visited {
+	color: #6E6C64;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* este grupo de selectores proporcionará a un usuario que navegue mediante el teclado la misma experiencia de hover (paso por encima) que experimenta un usuario que emplea un ratón. */
+	text-decoration: none;
+}
+
+/* ~~ este contenedor de anchura fija rodea a las demás divs ~~ */
+.container {
+	width: 1024px;
+	background-color: #99F;
+	margin: 0 auto; /* el valor automático de los lados, unido a la anchura, centra el diseño */
+}
+
+/* ~~ no se asigna una anchura al encabezado. Se extenderá por toda la anchura del diseño. Contiene un marcador de posición de imagen que debe sustituirse por su propio logotipo vinculado ~~ */
+.header {
+	background-color: rgb(211,153,113);
+	background-image: url(Pics/Double%20Expousure%20logo%20consejos.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 1024px;
+	height: 492px;
+	margin: 0px;
+}
+
+/* ~~ Esta es la información de diseño. ~~ 
+
+1) El relleno sólo se sitúa en la parte superior y/o inferior de la div. Los elementos situados dentro de esta div tienen relleno a los lados. Esto le ahorra las "matemáticas de modelo de cuadro". Recuerde que si añade relleno o borde lateral a la div propiamente dicha, éste se añadirá a la anchura que defina para crear la anchura *total*. También puede optar por eliminar el relleno del elemento en la div y colocar una segunda div dentro de ésta sin anchura y el relleno necesario para el diseño deseado.
+
+*/
+
+.content {
+	padding: 10px 0;
+	text-align: center;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* ~~ El pie de página ~~ */
+.footer {
+	background-color: rgb(211,153,113);
+	width: 1024px;
+	font-family: GeosansLight;
+	text-align: center;
+	font-size: 24px;
+	height: auto;
+	padding-top: 10px;
+	padding-right: 0;
+	padding-bottom: 10px;
+	padding-left: 0;
+}
+
+/* ~~ clases float/clear varias ~~ */
+.fltrt {  /* esta clase puede utilizarse para que un elemento flote en la parte derecha de la página. El elemento flotante debe preceder al elemento junto al que debe aparecer en la página. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* esta clase puede utilizarse para que un elemento flote en la parte izquierda de la página. El elemento flotante debe preceder al elemento junto al que debe aparecer en la página. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* esta clase puede situarse en una <br /> o div vacía como elemento final tras la última div flotante (dentro de #container) si #footer se elimina o se saca fuera de #container */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+
+.slider_retrato {
+	width: 20%;
+	margin: auto;
+	overflow: hidden;
+}
+
+.slider_retrato ul {
+	display: flex;
+	padding: 0;
+	width: 500%;
+	
+	animation: cambio 35s infinite;
+	animation-direction:alternate;
+}
+
+.slider_retrato li{
+	width: 100%;
+	list-style: none;
+	}
+	
+.slider_retrato img{
+	width: 100%;
+	}
+	
+	
+@keyframes cambio {
+	0% { margin-left:0;}
+	19% { margin-left:0;}
+	
+	20% { margin-left:-100%;}
+	39% { margin-left:-100%;}
+	
+	40% { margin-left:-200%;}
+	59% { margin-left:-200%;}
+	
+	60% { margin-left:-300%;}
+	79% { margin-left:-300%;}
+	
+	80% { margin-left:-400%;}
+	100% { margin-left:-400%;}
+	}	
+
+.slider_urban {
+	width: 40%;
+	margin: auto;
+	overflow: hidden;
+}
+
+.slider_urban ul {
+	display: flex;
+	padding: 0;
+	width: 500%;
+	
+	animation: urban 35s infinite;
+	animation-direction:alternate;
+}
+
+.slider_urban li{
+	width: 100%;
+	list-style: none;
+	}
+	
+.slider_urban img{
+	width: 100%;
+	}
+	
+	
+@keyframes urban {
+	0% { margin-left:0;}
+	19% { margin-left:0;}
+	
+	20% { margin-left:-100%;}
+	39% { margin-left:-100%;}
+	
+	40% { margin-left:-200%;}
+	59% { margin-left:-200%;}
+	
+	60% { margin-left:-300%;}
+	79% { margin-left:-300%;}
+	
+	80% { margin-left:-400%;}
+	100% { margin-left:-400%;}
+	}	
+	
+	
+	.slider_landscape {
+	width: 40%;
+	margin: auto;
+	overflow: hidden;
+}
+
+.slider_landscape ul {
+	display: flex;
+	padding: 0;
+	width: 500%;
+	
+	animation: landscape 35s infinite;
+	animation-direction:alternate;
+}
+
+.slider_landscape li{
+	width: 100%;
+	list-style: none;
+	}
+	
+.slider_landscape img{
+	width: 100%;
+	}
+	
+	
+@keyframes landscape {
+	0% { margin-left:0;}
+	19% { margin-left:0;}
+	
+	20% { margin-left:-100%;}
+	39% { margin-left:-100%;}
+	
+	40% { margin-left:-200%;}
+	59% { margin-left:-200%;}
+	
+	60% { margin-left:-300%;}
+	79% { margin-left:-300%;}
+	
+	80% { margin-left:-400%;}
+	100% { margin-left:-400%;}
+	}	
+	
+.wrapper {
+	width:100%;
+	max-width:1115px;
+	overflow:hidden;
+	background:#63C
+}
+
+	
+.content nav{
+	float: center;
+	line-height: 10px;
+	font-family: "roboto Lt";
+	margin: 0px;
+}
+
+
+.content nav a{
+	display:inline-block;
+	color:#fff;
+	text-decoration:none;
+	padding:15px 20px;
+	line-height:normal;
+	font-size:20px;
+}
+
+.content nav a:hover {
+	background:#f56f3a;
+	border-radius:30px;
+}
+
+-->
+</style></head>
+
+<body>
+
+<div class="container">
+  <div class="header"><!-- end .header --></div>
+<div class="content">
+ <div class="wrapper">
+			<nav>
+			<a href="index.html">Inicio</a>
+			<a href="conoce.html">Conócenos</a>
+			<a href="contratanos.html">Contrátanos</a>
+	</nav></div>
+    <h1>Para ser un mejor fotografo</h1>
+    <div class="intro">
+    <p>Como fotógrafos de profesión, Cesar Doble L &amp; Ageiron Ramo, dentro de esta página te dejan algunas de sus recomedaciones y consejos que pueden serte útiles al momento de contemplar y hacer una fotografía de lo que sea, sin importar el nivel de experiencia que tengas, éstos son tan útiles como para hacer un &quot;back to basics&quot; o como para aprender y utilizarlos en tu dia a dia.</p>
+    </div>
+    <div class="canon">
+      <h2>Aspectos Esenciales para hacer una fotografia correcta</h2></div>
+    <div class="retrato">
+      <h2>Fotografia de Retrato</h2></div>
+      <div class="textop">
+<p>Para aquellos fotógrafos que estan adentrandose un poco mas profundo a lo que es la fotografia de retrato. Si eres un fotografo que le encanta captar la esencia de una persona, el momento preciso en el que brota una sonrisa genuina o si eres de los que aprecia el poder que tiene un pulcro dolor de una expresión, sin duda estos breves consejos respaldados con años de experiencia te serviran para hacer aquello que te apasiona:</p>
+<p>&nbsp;</p>
+
+<div class="slider_retrato">
+<ul>
+  <li><img src="Pics/Retrato/FB_IMG_1485828661226.jpg" width="208" height="260"></li>
+<li><img src="Pics/Retrato/IMAG1125.jpg" width="208" height="260"></li>
+  <li><img src="Pics/Retrato/IMG_20141031_112411.jpg" width="208" height="260"></li>
+  <li><img src="Pics/Retrato/IMG_20141031_112435.jpg" width="208" height="260"></li>
+  <li><img src="Pics/Retrato/IMG_20141112_131756.jpg" width="208" height="260"></li>
+ </ul></div>
+ <br><br>
+ <p><b>1) </b>Aunque estés haciendo la foto en el exterior, y de día, hazla con flash. No es necesario que sea uno externo, el propio de la cámara te vale. Notarás una tremenda diferencia en los resultados.</p>
+ <p><b>2)</b> Abre bien el diafragma. Utiliza el modo de prioridad de apertura y reduce el valor f/.. todo lo que puedas. Así el sujeto saldrá bien enfocado y nítido, contrastando con un fondo muy desenfocado.</p>
+ <p><b>3)</b> Cuidado con los días muy soleados. Si el sol está dando fuerte no dejes que tu sujeto se coloque directamente debajo de él, pues eso generalmente ocasiona pequeñas pero fuertes sombras en el cuello y en la cara (sombras de la nariz por ejemplo). Lo mejor es que nuestro sujeto se coloque en un lugar donde el contraste entre sol y sombra no sea tan acentuado.</p>
+ <p><b>4)</b> Para los retratos hechos en casa, prueba colocando a tu sujeto cerca (muy cerca) de alguna fuente de luz exterior natural (una ventana por ejemplo). La luz natural procedente de la ventana llenará su rostro y sus ojos de vida y de expresividad. Eso sí, como venía diciendo en el consejo 3, evita la exposición directa a los rayos de sol.</p>
+ <p><b>5) </b>Durante el encuadre, procura dejar a tu modelo en el lado opuesto al sentido hacia el que tiene dirigida la cabeza. Por ejemplo si tiene la cabeza ligeramente girada hacia la derecha, colócalo a él a la izquierda del encuadre. Se llama la ley de la mirada.</p>
+ <p><b>6)</b> Para fotos de bebés procura tener el flash desactivado. Algunos pediatras comentan que el flash puede ocasionar daños irreparables al ojo del bebé. De todos modos, incluso si eso no fuera cierto, a los bebés no les suele hacer mucha gracia el flash. A menos que quieras que tu pequeño salga llorando en la foto.</p>
+ <p><b>7) </b>Si quieres obtener retratos atractivos y con enganche pídele al sujeto que colabore un poco colocándose en lugares extraños, o llevando ropa poco común para el lugar en el que se encuentra. Por ejemplo: una abuela en una discoteca; un médico con una raqueta de tenis;… El experimento, a parte de divertido, es una buena solución para esos momentos de falta de creatividad.</p>
+ <p><b>8)</b> Para fotografiar siluetas evita, en la medida de los posible, los ajustes automáticos, sobre todo los de exposición, medición de luz, etc. La cámara intentará de manera automática armonizar los contrastes oscureciendo el fondo iluminado y sobreexponiendo el sujeto silueta. Por otro lado seguramente el flash saltará por sí solo, intentando iluminar la silueta. Lo mejor es tomar el control manual para así conseguir todo el contraste que buscamos.</p>
+ <p><b>9)</b> Si le haces a tu sujeto adoptar posturas muy incómodas es muy probable que le saques un retrato con cara de estreñido. Para evitarlo asegúrate de que esté en una posición cómoda.</p>
+ <p><b>10) </b>La inclinación de la cabeza es un truco que la mayoría de los fotógrafos profesionales de retrato utilizan. El truco consiste en hacer que el sujeto incline ligeramente su cabeza hacia un lado. La mujer puede inclinar su cabeza hacia cualquier sentido (siempre sin exagerar) mientras que para el hombre es preferible que la ligera inclinación de la cabeza sea en el sentido opuesto a su hombro más cercano a la cámara.</p>
+ <p><b>11)</b> Un consejo que funciona muy bien a la hora de hacer retratos de grupo es situar las cabezas de los sujetos en diferentes alturas: haz que uno se siente en el sofá, otro en el suelo, otro de pie por detrás, etc.</p>
+ <div class="urbana">
+   <h2>Fotografia Urbana</h2></div>
+ <div class="slider_urban">
+<ul>
+  <li><img src="Pics/Urbana/IMAG0812.jpg" width="570" height="210"></li>
+ <li><img src="Pics/Urbana/SAM_1011.JPG" width="570" height="210"></li>
+  <li><img src="Pics/Urbana/SAM_1276.JPG" width="570" height="210"></li>
+  <li><img src="Pics/Urbana/SAM_1354.JPG" width="570" height="210"></li>
+  <li><img src="Pics/Urbana/SAM_1390.JPG" width="570" height="210"></li>
+</ul></div>
+ <div class="subs">
+   <h3>Discresion y flexibilidad</h3>
+ <p>A diferencia de otras disciplinas, en fotografía urbana, el equipo elegido no resulta decisivo, pero si deberemos procurar que nuestra elección nos permita garantizar el cumplimiento de una de las bases de la fotografía urbana: la discreción y el poder pasar desapercibidos para no interferir en la escena retratada. No obstante, además de esta característica, que nos habla fundamentalmente sobre el tamaño de nuestra cámara, también resultará interesante garantizar que nuestra cámara ofrece un enfoque veloz, un obturador silencioso, configuraciones manuales de apertura, tiempo de exposición e ISO y la posibilidad de disparar en modo ráfaga (realmente útil, dado que la fotografía urbana no está pactada).
+   
+   Por tanto, según lo comentado barajaremos los siguientes grupos de cámaras: móviles, compactas, bridges, CSC (ó EVIL) y Reflex. En mi opinión, probablemente los grupos más apropiados serían las bridges y CSC (ó EVIL), eso sí, podrás hacer fotografía urbana con cualquier cámara, así que si no tienes una cámara de alguno de los grupos indicados, no te preocupes y sigue adelante. También, como se suele decir en fotografía, "la mejor cámara es la que siempre llevas encima", lo que abre un importantísimo hueco al móvil.
+   
+   Por último, en cuanto al objetivo a elegir, en el caso de aquellas cámaras que permiten intercambiarlo (CSC ó EVIL y Reflex), funcionarán especialmente bien focales angulares o normales (desde los 28 a los 50mm). Focales superiores (teleobjetivos) hacen que la fotografía urbana pierda algo de su esencia al ser objetivos concebidos para disparar desde una posición más lejana a la escena.
+   
+   No pienses en más accesorios (salvo baterías y tarjetas de memoria). La fotografía urbana es sinónimo de sencillez en términos de equipo, así que bastará con lo dicho para lograr espectaculares fotos urbanas.</p>
+ <h3>Configuracion de la camara: Metering y Modo de disparo</h3>
+ <p>Estamos fotografiando en plena calle, a cualquier hora del día, con la presencia de edificios que proyectan grandes sombras, o en parques en que no existe ningún elemento que bloquee el potente sol. En definitiva, la ciudad es un entorno dinámico e incontrolable que origina que no existan unos parámetros infalibles, sino que precisan por parte del fotógrafo velocidad en la lectura de las condiciones de cada toma y en el consiguiente ajuste de parámetros.
+ 
+ Sin duda, uno de los ajustes al que más atención deberemos prestar será el metering de nuestra cámara y utilizar el más apropiado en cada situación: matricial (escenas uniformes), ponderado al centro (situaciones más contrastadas), o puntual (escenas con contraste extremo).
+ 
+ En cuanto al modo de disparo, sin duda, deberemos optar por un modo semiautomático: prioridad a la apertura (A ó Av) y prioridad al tiempo de exposición (S ó Tv). De este modo ajustaremos el parámetro que más nos interese y dejaremos en manos de la cámara el cálculo del complementario.
+
+Salvo que sea una escena que te permita mucha preparación o tengas gran pericia en su manejo, desaconsejo optar por el modo manual (M), pues podrías perder la captura por invertir demasiado tiempo en la configuración de los parámetros.</p>
+ <h3>Enfoque, Parametros y modo rafaga</h3>
+ <p>Deberás también prestar especial atención al modo de enfoque seleccionado. En este caso, a pesar de que los mecanismos de enfoque automático son cada vez más rápidos y precisos, es posible que no cuentes con el tiempo necesario para seleccionar el plano de enfoque y esperar a que tu cámara lo ajuste, o que no haya suficiente iluminación, por eso debes pasarte al modo manual.
+
+Con nuestra cámara en modo de enfoque manual y una apertura suficientemente reducida f/8, f/11... buscaremos ubicar el plano de enfoque en un punto que nos permita obtener una profundidad de campo tal que podamos tener garantías de capturar de forma nítida a nuestro sujeto (si es posible hacer uso de la hiperfocal, resultará mucho más rápido y eficaz). Requiere práctica, pero una vez dominado aporta una gran velocidad.
+
+Por supuesto, para hacer posible el uso de las aperturas citadas y disponer de tiempos de exposición siempre superiores a 1/100 seg (el mínimo recomendable), deberás, en función de las condiciones lumínicas de la escena, elevar la sensibilidad ISO. Aunque recuerda que esto originará la aparición de ruido, por lo que deberás conocer tú cámara y hasta qué niveles de sensibilidad el ruido que genera es asumible.
+
+Por último, y como comentábamos en el apartado anterior, si tu cámara dispone de la opción de disparar en modo ráfaga, actívalo. En fotografía urbana es esencial este ajuste, pues al no haber coordinación entre fotógrafo y sujeto, no hay garantía de cuándo será el mejor momento para realizar la toma.
+</p>
+ <h3>Saber leer la luz y las condiciones de cada escena</h3>
+ <p>Creo que es la cuarta o quinta vez en lo que va de artículo que hablo de la luz, pero es que, junto con la dificultad de predecir el comportamiento de las personas que aparecen en las fotografías, la imposibilidad de controlar la luz y el dinamismo de ésta a lo largo de las horas y en las distintas partes de la ciudad que puedes fotografiar son los dos elementos más característicos y más difíciles de manejar de la fotografía urbana.
+
+En función de la hora en la que lleves a cabo las fotografías y la ubicación dentro de la ciudad en la que te encuentres en cada momento, deberás conocer las características de la luz y usarlas en tu provecho. En lugar de realizar una descripción de los tipos de luces, he considerado más oportuno recomendarte un fantástico artículo de Javier Millán en que describe los tipos de luz a lo largo del día. Por si eres algo perezoso, aquí te dejo un resumen:
+
+Horas centrales: Luz intensa, blanca y de alto contraste.
+Amanecer y atardecer: Intensidad media, cálida y de contraste moderado.
+Alba y crepúsculo: Baja intensidad, fría y de bajo contraste.
+Días nublados: Luz intensa, blanca y de bajo contraste.
+En condiciones de niebla: Intensidad media, blanca-azulada y de bajo contraste.
+Además de estas condiciones también deberás contemplar la posibilidad de lluvia y nieve, siendo fundamental estar resguardado para protegerte y también a tu equipo.
+
+Y, por supuesto, las tomas nocturnas, muy características de la fotografía urbana y en las que deberás ayudarte de fuentes de iluminación artificial como farolas, semáforos, letreros luminosos y parámetros como tiempos de exposición más prolongados y sensibilidades ISO más elevadas para lograr una correcta exposición.</p>
+ <h3>Mejorar Composicion</h3>
+ <p>¿Luz natural, personas incontroladas y además hay que cuidar la composición? Me temo que sí, de lo contrario no lograrás una fotografía urbana "perfecta". Como sé que es difícil tener todo esto en la cabeza, allá van unos consejos para tratar de ayudarte a lograr una buena composición en tus fotografías, como en la imagen siguiente.
+ No olvides las reglas que siempre funcionan: la regla de los tercios, la regla de la mirada, o la regla del movimiento.
+Procura equilibrar la fotografía a partir de los pesos de los distintos elementos que intervienen.
+Trabaja con puntos, sobre los que atraer la atención y con líneas, que te ayudarán a conducir la mirada (horizontales, verticales, diagonales, curvas). Ya sabes que cada una tiene un significado concreto.
+Utiliza patrones y formas que den ritmo y contribuyan al dinamismo de tus imágenes.
+Logra composiciones sencillas a través de un uso sencillo del color y con suficiente contraste: blanco y negro, o bien con colores complementarios.
+Limpia el fondo de tus imágenes para evitar distraer la atención.
+No hay recetas mágicas, pero si pones en práctica alguno de los consejos comentados, te garantizo que lograrás fantásticos resultados a nivel compositivo.</p>
+ <h3>vence el miedo y la verguenza</h3>
+ <p>Al margen del desconocimiento técnico o de falta de pericia en la gestión de la iluminación o de limitaciones compositivas, la principal dificultad que entraña la fotografía urbana es nuestro miedo, vergüenza o mala concepción, por culpa de los paparazzis, que existe sobre la fotografía urbana.
+
+Así que lo primero que deberás hacer es olvidarte de esto y empezar a fotografiar en lugares públicos. Para ello es vital que salgas a la calle y comiences a utilizar tu cámara. Al principio puedes empezar con teleobjetivos y buscando cierta discreción, para acabar por emplear objetivos más cortos y habiendo naturalizado la realización de fotografías en la vía pública.
+
+En función del umbral de riesgo o vergüenza que soportes puedes comenzar con una técnica que los americanos denominan "shooting from the heap", tipo vaquero, o hacer como que fotografías otro motivo, o bien por no tener miedo a mostrar que estas realizando una fotografía y actuar de forma relajada y natural.
+
+No estás haciendo nada malo, siempre que no busques la mofa o el ridículo del sujeto fotografiado. Y, si alguien te detecta y se molesta, basta con pedirle disculpas y ofrecerte a borrar la imagen. Tienes que tener en cuenta que cualquier persona que aparezca en tu fotografía está en su pleno derecho de reclamarte que la elimines.</p>
+ <h3>Conoce la ley y tus derechos</h3>
+ <p>En lo que respecta a nuestra legislación constitucional podemos decir que la tutela de la vida privada se desprende del contenido de los artículos 6°, 7° y 16 de la Constitución que establecen:
+ 
+Artículo 6º. Que la libertad de expresión tiene como límite el respetar los derechos de tercero.
+Artículo 7º. Que la libertad de imprenta tiene como límite el respetar la vida privada.
+Artículo 16. Que nadie puede ser molestado en su persona, familia, domicilio, papeles o posesiones sino en virtud de mandamiento escrito de autoridad competente que funde y motive la causa legal del procedimiento. Dicho artículo también establece la inviolabilidad del domicilio, así como la inviolabilidad de las comunicaciones privadas y de la correspondencia.
+
+Todo esto se considera como intromision, salvo en estos casos:
+
+Cuando se cuenta con autorización expresa de quien aparece.
+Cuando la fotografía tiene intereses históricos, científicos o culturales.
+Cuando se trata de un personaje público.
+Cuando se fotografía un suceso o acontecimiento público y la persona aparece de forma accesoria.
+
+En el caso de menores, la ley es aún más proteccionista, siendo casi obligatorio, en este caso, contar con una autorización por escrito por parte de padres o tutores.
+
+
+En los demás casos, podemos optar por evitar retratos directos, no incluir rostros de forma que sean reconocibles, evitar mostrar caras o, en el caso de hacerlo, tener claro que podemos acogernos a alguna de las excepciones indicadas.
+
+No obstante, deberemos ser conscientes en todo momento de dos premisas:
+
+si pretendemos comercializar las fotografías siempre deberemos contar con el consentimiento explícito de los fotografiados (aún en el caso de que se cumplan las excepciones mencionadas).
+también aunque se cumpla alguna de las excepciones, cualquier persona que aparezca en la fotografía y solicite la eliminación de la misma, está en su pleno derecho y deberemos borrarla.</p>
+ <h3>B&N el acabado por excelencia</h3>
+ <p>Cuando encuentres libros, revistas o paginas web donde muestren fotografias urbanas te podras dar cuenta de que las capturas mas bellas y finas casi siempre estan en blanco y negro, es como un comen denominador en esta rama de la fotografia.
+ 
+Nuestra unica recomendación en este sentido es que no realices una conversión a la ligera, sino que apliques la técnica más apropiada en cada caso y que cuides otros ajustes como exposición, balance de blancos o nivel de enfoque antes de realizar la conversión.</p>
+ <h3>Disparar siempre en RAW</h3>
+ <p>Haz todas tus fotos en RAW. Este formato preserva todos los elementos de la foto (colores, luz, sombras, saturación) y permite, mediante un procesamiento posterior, moverlos a nuestro antojo. Realizar una foto en JPG produce una foto final en la que no tendríamos más margen de modificación. </p>
+ <p>&nbsp;</p>
+ <div class="paisaje">
+   <h2>Fotografia de Paisaje</h2></div>
+ <h3>1)Utiliza lentes de gran angular</h3>
+ <p>Al capturar una foto de un paisaje natural normalmente buscamos un encuadre lo más amplio posible. Para ello necesitarás trabajar con objetivos de distancia focal pequeña, algo entre los 16mm y los 24mm estaría bien. Otras distancias focales inferiores o superiores también pueden darte un buen resultado, pero lo ideal sería que te movieras en ese rango.</p>
+ <h3>2)Utiliza aperturas pequeñas de diafragma</h3>
+ <p>A veces en la fotografía de retrato o de objetos nos gusta enfocar el sujeto y desenfocar el fondo. En la fotografía paisajística no es así. Nos interesa tener todo el panorama enfocado de manera uniforme. Para conseguirlo tenemos que utilizar aperturas de diafragma relativamente pequeñas. Ya sabes que a mayor valor f/ más pequeña será la apertura. Te recomiendo que para paisajes utilices siempre aperturas de f/11 ó más. Cuidado, si tienes la cámara a f/3.5 ó f/1.4 el resultado será más bien desastroso.</p>
+ <h3>3)Utiliza un tripode</h3>
+ <p>Si sigues el consejo anterior de utilizar pequeñas aperturas (valor f/11 ó más) como efecto secundario no deseado la cámara tendrá menos luz, con lo que la foto será demasiado oscura. Para evitar esto necesitarás utilizar velocidades de apertura un poco lentas, lo que hará que la foto te salga un poco movida y borrosa. Así que te será IMPRESCINDIBLE usar un trípode con el que le asegurarás a tu cámara toda la estabilidad que la situación requiere.</p>
+ <h3>4)Enncuentra un punto de protagonismo</h3>
+ <p>El paisaje puede ser alucinantemente bello pero no puede ser protagonista todo el paisaje. Toda foto paisajística exitosa contiene algún elemento protagonista, algo en lo que la gente consciente o insconscientemente se fijan al mirar la foto. Si quieres que tu paisaje sea interesante haz que tenga algún elemento de protagonismo: puede ser un arbol, un edificio, una silueta, el propio horizonte si lo encontrásemos lo suficientemente interesante,…</p>
+ <h3>5)De nuevo: Laregla de los tercios</h3>
+ <p>Esta famosa regla consiste en que, a la hora de encaudrar el paisaje, evitemos colocar la línea del Horizonte justo a la mitad del encuadre. En vez de eso habría que colocarlo o un poco más arriba o un poco más abajo. En otras palabras: tiene que dominar o el paisaje terrestre o el cielo. No pueden los dos compartir la superficie de la foto de manera igualitaria.
+Según los fundamentos artísticos de la composición un horizonte que atraviesa la foto justo por la mitad la convierte normalmente en una foto aburrida.</p>
+<h3>6)Ten cuidado con el cielo</h3>
+<p>El cielo es un elemento del que hay que tener siempre cuidado. Siguiendo el consejo anterior de la regla de los tercios, si un día nos encontramos con un cielo azul sin nubes, totalmente despejado y aburrido, lo mejor es que reduzcamos la cantidad de cielo visible en la foto restándole así protagonismo. En cambio, para los días en que el cielo tiene una interesante mezcla y contraste de cielo azul y nubes blancas, o cuando está lleno de dramatismo y color, ahí sí que nos convendría cederle algo más de la mitad de la foto.</p>
+ <h3>7)Busca dramatismo, movimiento y fuerza</h3>
+ <p>Tendemos a pensar que la fotografía de paisajes es la máxima expresión de la calma, de la paz y de la serenidad. Y es cierto, pero nos olvidamos de que también los paisajes naturales a veces expresan movimiento, rabia y fuerza. Si quieres conseguir fotos originales y llamativas te recomiendo que te empieces a trabajar esta faceta también. Sigue fotografiando paisajes serenos pero de vez en cuando intenta capturar este movimiento que te digo. Hay varias maneras de capturarlo: la fuerza del viento en los árboles, las olas del mar, unas cataratas o unas nubes en movimiento, etc.</p>
+ <h3>8)No te dejes desanimar por el tiempo</h3>
+ <p>El parte meteorológico anuncia un espléndido y soleado fin de semana, sin una sola nube en el cielo. Sí sí, para salir al parque o a tomar unas cervezas con los amigos está genial, pero no pienses que cuanto más soleado sea el día y más despejado el cielo mejores fotos de paisajes vas a conseguir. Como te decía unas líenas más arriba, los paisajes necesitan que el cielo tenga un poco de “vida”, algo de sabor, un cierto contraste. Y eso son las nubes.
+De igual modo no te dejes desilusionar por un día nublado en que parece que va a llover. A veces una nubes dramáticas, un sol que se intenta abrirse camino a través de un cielo gris, o incluso un repentino arcoiris te pueden regalar tu mejor fotografía paisajística, cuando menos te lo esperas.</p>
+ <h3>9)Aprovecha la mañana y la noche</h3>
+ <p>No, no puedes tirarte las mañanas del fin de semana sobando la almohada, ricamente acurrucado debajo el edredón hasta las 11 de la mañana y luego quejarte de no ser capaz de hacer buenas fotografías de paisajes. El amanecer y el atardecer son dos momentos del día en que el color de la luz, su suavidad y su ángulo te ayudarán a producir impresionantes fotografías. Piensalo por un momento, ¿Cuántas fotos de amaneceres y atardeceres no te han cautivado?</p>
+ <h3>10)Prepara un aexcursion</h3>
+ <p>No esperes encontrarte los mejores parajes naturales al borde de la carretera. Si ése es tu caso estás perdiendo el tiempo. Normal que nunca consigas retratar ese espléndido paisaje que buscas. Habitualmente los mejores paisajes suelen estar más alejados de la carretera, así que para poderlos alcanzar tienes que estar preparado para hacer una pequeña excursión. Puedes empezar tu viaje en coche pero a partir de un punto dado es recomendable aparcar el coche y adentrarse en la naturaleza, a pie, equipado con un mapa, GPS, o alguna referencia que te ayude a explorar el lugar. Aunque no vayas siguiendo un punto en concreto muchas veces terminas descubriendo un magnífico paisaje que nadie antes había retratado </p>
+ <h3>11)Utiliza puntos de vista intrepidos y creativos</h3>
+ <p>Si encuentras que tus fotos de paisajes son muy monótonas, puede que la razón sea el punto de vista o perspectiva desde la que normalmente disparas. Generalmente solemos disparar siempre desde la misma perspectiva, y ése es un hábito que hay que cambiar pero YA. En tus próximas sesiones por favor intenta variar de perspectiva: dispara desde puntos y ángulos que antes no habías experimentado, por ejemplo desde el suelo que suele dar muy buenos resultados.</p>
+ 
+ </div></div>
+ 
+ <div class="slider_landscape">
+<ul>
+  <li><img src="Pics/Paisaje/IMAG0275.jpg" width="600" height="210"></li>
+<li><img src="Pics/Paisaje/IMG_20160403_140539.jpg" width="600" height="210"></li>
+  <li><img src="Pics/Paisaje/IMG_20160403_174957.jpg" width="600" height="210"></li>
+  <li><img src="Pics/Paisaje/IMG_20160416_155212.jpg" width="600" height="210"></li>
+  <li><img src="Pics/Paisaje/received_1331777393563029.jpeg" width="600" height="210"></li>
+</ul></div>
+ 
+ 
+</div>
+
+
+
+  <div class="footer">
+    <p>Toda esta Informacion pertenece a Double Expousure Company. 2017</p>
+<!-- end .footer --></div>
+  <!-- end .container --></div>
+</body>
+</html>
